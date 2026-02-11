@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>T’z International｜米国市場展開のパートナー</title>
+  <meta name="description" content="T’z Internationalは、多国籍間貿易・販売支援を専門とする米国商社です。米国市場展開のパートナーとして、仕入れ・流通・販売まで一貫して支援します。" />
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --card:#0f1620;
+      --text:#e9eef6;
+      --muted:#a9b4c3;
+      --line:rgba(255,255,255,.08);
+      --accent:#7dd3fc;
+      --accent2:#a78bfa;
+      --ok:#34d399;
+      --warn:#fbbf24;
+      --radius:22px;
+      --shadow: 0 18px 50px rgba(0,0,0,.35);
+      --max: 1120px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: radial-gradient(1200px 600px at 20% 10%, rgba(125,211,252,.18), transparent 55%),
+                  radial-gradient(900px 600px at 80% 0%, rgba(167,139,250,.18), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.7;
+    }
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 18px}
+
+    /* Header */
+    header{
+      position:sticky; top:0; z-index:20;
+      backdrop-filter: blur(10px);
+      background: rgba(11,15,20,.65);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+      gap:14px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      min-width: 220px;
+    }
+    .logo{
+      width:40px; height:40px; border-radius:12px;
+      background: linear-gradient(135deg, rgba(125,211,252,.25), rgba(167,139,250,.25));
+      border:1px solid var(--line);
+      display:grid; place-items:center;
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+      font-weight:800;
+    }
+    .logoImg{
+      width:44px;
+      height:44px;
+      border-radius:14px;
+      padding:6px;
+      background: rgba(255,255,255,.92);
+      border:1px solid var(--line);
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+      object-fit: contain;
+    }
+    .brand h1{font-size:14px; margin:0; letter-spacing:.2px}
+    .brand p{margin:0; font-size:12px; color:var(--muted)}
+
+    nav ul{list-style:none; padding:0; margin:0; display:flex; gap:12px; flex-wrap:wrap; justify-content:flex-end}
+    nav a{
+      display:inline-flex; align-items:center;
+      padding:9px 12px;
+      border:1px solid transparent;
+      border-radius:999px;
+      color:var(--muted);
+      font-size:13px;
+      transition: .18s ease;
+    }
+    nav a:hover{border-color:var(--line); color:var(--text); background:rgba(255,255,255,.03)}
+
+    .cta{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:10px 14px;
+      border-radius:999px;
+      background: linear-gradient(135deg, rgba(125,211,252,.25), rgba(167,139,250,.25));
+      border:1px solid rgba(255,255,255,.12);
+      color:var(--text);
+      font-weight:700;
+      font-size:13px;
+      box-shadow: var(--shadow);
+    }
+
+    /* Sections */
+    section{padding:64px 0}
+    .hero{padding:54px 0 26px}
+    .grid{display:grid; gap:18px}
+    .heroGrid{grid-template-columns: 1.15fr .85fr; align-items:stretch}
+
+    .card{
+      background: rgba(15,22,32,.72);
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding:22px;
+    }
+
+    .kicker{color:var(--accent); font-weight:800; letter-spacing:.3px; font-size:13px}
+    h2{font-size:40px; margin:10px 0 10px; line-height:1.15}
+    h3{font-size:20px; margin:0 0 8px}
+    p{margin:0 0 12px; color:var(--muted)}
+
+    .hero p{font-size:15px}
+
+    .pillRow{display:flex; flex-wrap:wrap; gap:10px; margin-top:14px}
+    .pill{
+      border:1px solid var(--line);
+      padding:8px 12px;
+      border-radius:999px;
+      font-size:13px;
+      color:var(--text);
+      background:rgba(255,255,255,.03);
+    }
+
+    .btnRow{display:flex; gap:12px; flex-wrap:wrap; margin-top:18px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:12px 14px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      color:var(--text);
+      font-weight:700;
+      font-size:14px;
+      transition:.18s ease;
+    }
+    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.06)}
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(125,211,252,.25), rgba(167,139,250,.25));
+      border-color: rgba(255,255,255,.12);
+    }
+
+    .two{grid-template-columns:1fr 1fr}
+    .three{grid-template-columns:1fr 1fr 1fr}
+
+    .list{margin:0; padding-left:18px; color:var(--muted)}
+    .list li{margin:6px 0}
+
+    .badge{
+      display:inline-flex; align-items:center;
+      gap:8px;
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      color:var(--text);
+      font-weight:700;
+      font-size:13px;
+    }
+
+    .faq details{
+      border:1px solid var(--line);
+      border-radius: 18px;
+      padding:14px 14px;
+      background: rgba(255,255,255,.02);
+    }
+    .faq summary{cursor:pointer; font-weight:800}
+    .faq details p{margin-top:10px}
+
+    footer{border-top:1px solid var(--line); padding:28px 0 50px; color:var(--muted)}
+
+    /* Page switching */
+    .page{display:none}
+    .page.active{display:block}
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .heroGrid{grid-template-columns:1fr}
+      h2{font-size:34px}
+      nav ul{display:none}
+    }
+    @media (max-width: 720px){
+      .two,.three{grid-template-columns:1fr}
+      section{padding:48px 0}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#" onclick="go('home')" aria-label="T’z International Home">
+      <!-- NOTE: ロゴは、ユーザー添付のPDFをSVG/PNGに変換して差し替える想定 -->
+      <img class="logoImg" src="tz-logo.png" alt="T’z International ロゴ" />
+      <div>
+        <h1>T’z International</h1>
+        <p>米国市場展開のパートナー</p>
+      </div>
+    </a>
+
+    <nav>
+      <ul>
+        <li><a href="#" onclick="go('about')">会社概要</a></li>
+        <li><a href="#" onclick="go('strengths')">強み</a></li>
+        <li><a href="#" onclick="go('services')">サービス</a></li>
+        <li><a href="#" onclick="go('value')">提供価値</a></li>
+        <li><a href="#" onclick="go('channels')">販売チャネル</a></li>
+        <li><a href="#" onclick="go('faq')">FAQ</a></li>
+        <li><a href="#" onclick="go('contact')" class="cta">お問い合わせ</a></li>
+      </ul>
+    </nav>
+
+    <a href="#" onclick="go('contact')" class="cta">相談する</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- HOME -->
+  <div id="page-home" class="page active">
+    <section class="hero">
+      <div class="wrap grid heroGrid">
+        <div class="card">
+          <div class="kicker">T’z International</div>
+          <h2>米国市場展開の<br>パートナーとして</h2>
+          <p>
+            T’z Internationalは、多国籍間貿易・販売支援を専門とする米国商社です。<br>
+            米国市場・流通・規制への理解をベースに、仕入れ・流通・販売まで一貫してサポートします。
+          </p>
+          <div class="pillRow" aria-label="Highlights">
+            <div class="pill">米国市場に強い</div>
+            <div class="pill">流通・販売の実務</div>
+            <div class="pill">規制/表示/認証対応</div>
+            <div class="pill">モデル設計</div>
+          </div>
+          <div class="btnRow">
+            <a class="btn primary" href="#" onclick="go('contact')">まずは情報交換から</a>
+            <a class="btn" href="#" onclick="go('services')">サービスを見る</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>こんなお悩み、ありませんか？</h3>
+          <ul class="list">
+            <li>米国で「どう売るか」の設計が難しい</li>
+            <li>価格設定・チャネル戦略を相談したい</li>
+            <li>FDAなど規制が不安で前に進めない</li>
+            <li>クレーム対応や在庫リスクが怖い</li>
+          </ul>
+          <p style="margin-top:12px">
+            T’z Internationalは、米国での販売を現実的に進めるための“実務”に強いパートナーです。
+          </p>
+          <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap">
+            <span class="badge">✔ 販売モデルを一緒に設計</span>
+            <span class="badge">✔ 米国側の運用も支援</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="grid two">
+          <div class="card">
+            <h3>私たちが得意なこと</h3>
+            <ul class="list">
+              <li>販売エリアに応じた販売モデルの企画</li>
+              <li>多国籍間貿易・販売支援</li>
+              <li>規制・認証・表示（パッケージ）調整</li>
+              <li>中長期的なブランド戦略設計</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>まずは「情報交換」から</h3>
+            <p>
+              いきなり契約ではなく、現状整理と選択肢の確認から進められます。<br>
+              ご状況に合わせて、独占卸・独占小売・販売代行・買取型など柔軟に設計します。
+            </p>
+            <div class="btnRow">
+              <a class="btn primary" href="#" onclick="go('contact')">お問い合わせ</a>
+              <a class="btn" href="#" onclick="go('faq')">FAQを見る</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ABOUT -->
+  <div id="page-about" class="page">
+    <section>
+      <div class="wrap">
+        <div class="card">
+          <div class="kicker">About</div>
+          <h2>会社概要</h2>
+          <p>
+            T’z Internationalは、米国市場展開を目指す日本企業向けに、輸出・流通・販売を支援する米国商社です。
+          </p>
+        </div>
+
+        <div class="grid two" style="margin-top:18px">
+          <div class="card">
+            <h3>会社の歩み（要約）</h3>
+            <ul class="list">
+              <li>1980年：米国にてアパレル卸業をスタート</li>
+              <li>2000年：業態を商社へ転換</li>
+              <li>2003年：貿易コンサルティング開始</li>
+              <li>2006年：日本企業の米国市場展開支援に注力</li>
+              <li>現在：多国籍間貿易・販売支援</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>大切にしている考え方</h3>
+            <p>
+              「米国で売れる形」に落とし込むには、流通・規制・価格・クレーム対応まで含めた実務設計が欠かせません。
+              私たちは、机上の計画ではなく、現場で回るモデルづくりを支援します。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- STRENGTHS -->
+  <div id="page-strengths" class="page">
+    <section>
+      <div class="wrap">
+        <div class="card">
+          <div class="kicker">Strengths</div>
+          <h2>強み</h2>
+          <p>
+            長年の実績と、米国市場の理解を活かし、販売モデルの企画から実行まで伴走します。
+          </p>
+        </div>
+
+        <div class="grid three" style="margin-top:18px">
+          <div class="card">
+            <h3>実績</h3>
+            <p>長年に及ぶ多国籍間貿易の実績があります。</p>
+          </div>
+          <div class="card">
+            <h3>米国市場への理解</h3>
+            <p>市場・流通・規制の理解度が高く、現実的な提案が可能です。</p>
+          </div>
+          <div class="card">
+            <h3>モデル設計</h3>
+            <p>販売エリアに応じて最適な販売モデルを企画します。</p>
+          </div>
+        </div>
+
+        <div class="grid two" style="margin-top:18px">
+          <div class="card">
+            <h3>丁寧な対応</h3>
+            <p>
+              各国のスタンダードの違いを踏まえた、実務レベルの丁寧な対応を重視しています。
+            </p>
+          </div>
+          <div class="card">
+            <h3>相談しやすさ</h3>
+            <p>
+              まずは情報交換から。状況を整理しながら、最適な進め方をご提案します。
+            </p>
+            <div class="btnRow">
+              <a class="btn primary" href="#" onclick="go('contact')">相談する</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- SERVICES -->
+  <div id="page-services" class="page">
+    <section>
+      <div class="wrap">
+        <div class="card">
+          <div class="kicker">Services</div>
+          <h2>サービス / ビジネスモデル</h2>
+          <p>
+            ご要望・リスク許容度・販売戦略に応じて、最適なモデルを設計します。
+          </p>
+        </div>
+
+        <div class="grid two" style="margin-top:18px">
+          <div class="card">
+            <h3>独占小売</h3>
+            <ul class="list">
+              <li>独占販売権（米国市場）</li>
+              <li>在庫保有</li>
+              <li>販売促進・マーケティング</li>
+              <li>顧客対応・クレーム対応</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>独占卸</h3>
+            <ul class="list">
+              <li>独占販売権（米国市場）</li>
+              <li>卸売販売</li>
+              <li>在庫保有</li>
+              <li>小売店開拓</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="grid two" style="margin-top:18px">
+          <div class="card">
+            <h3>小売販売代行</h3>
+            <ul class="list">
+              <li>小売販売の代行</li>
+              <li>販売促進</li>
+              <li>顧客対応</li>
+              <li>在庫はメーカー保有（条件により調整）</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>買取型</h3>
+            <ul class="list">
+              <li>メーカーから買取</li>
+              <li>米国内での販売をT’z側で実施</li>
+              <li>価格・流通・販促を一括設計</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:18px">
+          <h3>補足：モデル選定の考え方</h3>
+          <p>
+            「在庫リスク」「価格決定権」「ブランド価値の維持」「クレーム対応」「米国内運用」のどこを誰が担うかで、最適解が変わります。
+            まずは現状とゴールを整理し、現実的な形に落とし込みます。
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- VALUE -->
+  <div id="page-value" class="page">
+    <section>
+      <div class="wrap">
+        <div class="card">
+          <div class="kicker">Value</div>
+          <h2>提供価値</h2>
+          <p>
+            ただ「輸出する」だけではなく、米国で継続して売れる仕組みづくりまで支援します。
+          </p>
+        </div>
+
+        <div class="grid two" style="margin-top:18px">
+          <div class="card">
+            <h3>価格提案</h3>
+            <p>市場とチャネルに合わせて、現実的な価格設計を提案します。</p>
+          </div>
+          <div class="card">
+            <h3>供給体制の構築</h3>
+            <p>継続供給できる体制づくりを支援します。</p>
+          </div>
+        </div>
+
+        <div class="grid two" style="margin-top:18px">
+          <div class="card">
+            <h3>規制・認証・表示（パッケージ）</h3>
+            <ul class="list">
+              <li>FDA対象の整理</li>
+              <li>保険の手配</li>
+              <li>表示・パッケージ調整</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>中長期ブランド戦略</h3>
+            <p>
+              短期の売上だけでなく、米国市場でのブランド価値を育てる設計を重視します。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- CHANNELS -->
+  <div id="page-channels" class="page">
+    <section>
+      <div class="wrap">
+        <div class="card">
+          <div class="kicker">Channels</div>
+          <h2>販売チャネル</h2>
+          <p>
+            商品特性・ターゲットに合わせて、複数チャネルを組み合わせます。
+          </p>
+        </div>
+
+        <div class="grid two" style="margin-top:18px">
+          <div class="card">
+            <h3>EC</h3>
+            <ul class="list">
+              <li>自社EC</li>
+              <li>Amazon</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>店舗 / B2B</h3>
+            <ul class="list">
+              <li>専門店</li>
+              <li>介護施設・B2B</li>
+              <li>展示会</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- FAQ -->
+  <div id="page-faq" class="page">
+    <section>
+      <div class="wrap">
+        <div class="card">
+          <div class="kicker">FAQ</div>
+          <h2>よくある質問</h2>
+          <p>
+            よくいただくご質問をまとめました。ここにない内容も、お気軽にお問い合わせください。
+          </p>
+        </div>
+
+        <div class="grid faq" style="margin-top:18px">
+          <details>
+            <summary>在庫リスクはどうなりますか？</summary>
+            <p>ビジネスモデル（独占小売・独占卸・販売代行・買取型）により変わります。リスクの持ち方を整理して最適案を提案します。</p>
+          </details>
+          <details>
+            <summary>価格は誰が決めますか？</summary>
+            <p>モデルとチャネルにより異なります。ブランド価値を守りつつ、米国市場で売れる価格設計を提案します。</p>
+          </details>
+          <details>
+            <summary>ブランド価値を維持したまま販売できますか？</summary>
+            <p>はい。短期売上だけでなく、中長期のブランド戦略も含めて設計します。</p>
+          </details>
+          <details>
+            <summary>米国内でクレームが起きた場合は？</summary>
+            <p>顧客対応・返品対応・クレーム対応を含め、米国側の運用も支援します。モデルによって役割分担を明確化します。</p>
+          </details>
+          <details>
+            <summary>メンテナンスが必要な商材でも対応できますか？</summary>
+            <p>可能です。米国内での対応体制を含めて設計しますので、まずは状況を共有ください。</p>
+          </details>
+        </div>
+
+        <div class="card" style="margin-top:18px">
+          <h3>ここまで読んでくださった方へ</h3>
+          <p>
+            「まずは情報交換から」でも大歓迎です。現状整理と、進め方の選択肢を一緒に確認しましょう。
+          </p>
+          <div class="btnRow">
+            <a class="btn primary" href="#" onclick="go('contact')">お問い合わせ</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- CONTACT -->
+  <div id="page-contact" class="page">
+    <section>
+      <div class="wrap">
+        <div class="card">
+          <div class="kicker">Contact</div>
+          <h2>お問い合わせ</h2>
+          <p>
+            まずは情報交換から、お気軽にご連絡ください。通常、1〜2営業日以内に返信いたします。
+          </p>
+        </div>
+
+        <div class="grid two" style="margin-top:18px">
+          <div class="card">
+            <h3>連絡先</h3>
+            <p style="margin-bottom:6px"><strong>Email</strong></p>
+            <p><a href="mailto:info@tz-international.com">info@tz-international.com</a></p>
+
+            <p style="margin-top:14px; margin-bottom:6px"><strong>補足</strong></p>
+            <ul class="list">
+              <li>商品カテゴリー</li>
+              <li>想定チャネル（EC/店舗/B2Bなど）</li>
+              <li>販売希望時期</li>
+              <li>現状の課題</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>簡易フォーム（仮）</h3>
+            <p>
+              ドメイン取得後、実フォーム（Google Form / HubSpot / WordPress等）に置き換えできます。
+            </p>
+            <form onsubmit="return submitFake(event)">
+              <label style="display:block; margin:10px 0 6px; color:var(--muted)">会社名</label>
+              <input required style="width:100%; padding:12px 12px; border-radius:14px; border:1px solid var(--line); background:rgba(255,255,255,.02); color:var(--text)" />
+
+              <label style="display:block; margin:12px 0 6px; color:var(--muted)">お名前</label>
+              <input required style="width:100%; padding:12px 12px; border-radius:14px; border:1px solid var(--line); background:rgba(255,255,255,.02); color:var(--text)" />
+
+              <label style="display:block; margin:12px 0 6px; color:var(--muted)">メールアドレス</label>
+              <input required type="email" style="width:100%; padding:12px 12px; border-radius:14px; border:1px solid var(--line); background:rgba(255,255,255,.02); color:var(--text)" />
+
+              <label style="display:block; margin:12px 0 6px; color:var(--muted)">お問い合わせ内容</label>
+              <textarea required rows="5" style="width:100%; padding:12px 12px; border-radius:14px; border:1px solid var(--line); background:rgba(255,255,255,.02); color:var(--text)"></textarea>
+
+              <div class="btnRow">
+                <button class="btn primary" type="submit">送信（仮）</button>
+                <a class="btn" href="mailto:info@tz-international.com">メールで送る</a>
+              </div>
+              <p id="fakeMsg" style="margin-top:10px; display:none"></p>
+            </form>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:18px">
+          <h3>次のステップ</h3>
+          <ul class="list">
+            <li>ヒアリング（現状・課題・目標）</li>
+            <li>販売モデルの仮設計（卸/小売/代行/買取）</li>
+            <li>規制・表示・価格・チャネルの整理</li>
+            <li>スケジュールと進め方の合意</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap">
+      <div>
+        <strong style="color:var(--text)">T’z International</strong><br>
+        <span>米国市場展開のパートナー</span>
+      </div>
+      <div>
+        <a href="#" onclick="go('contact')">info@tz-international.com</a>
+      </div>
+    </div>
+    <div style="margin-top:14px; font-size:12px">© <span id="y"></span> T’z International. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  const pages = ['home','about','strengths','services','value','channels','faq','contact'];
+
+  function go(name){
+    pages.forEach(p=>{
+      const el = document.getElementById('page-' + p);
+      if(el) el.classList.remove('active');
+    });
+    const target = document.getElementById('page-' + name);
+    if(target) target.classList.add('active');
+    window.scrollTo({top:0, behavior:'smooth'});
+  }
+
+  function submitFake(e){
+    e.preventDefault();
+    const msg = document.getElementById('fakeMsg');
+    msg.style.display='block';
+    msg.style.color='var(--ok)';
+    msg.textContent='送信ありがとうございました（※これは仮フォームです）。このサイト公開時は実フォームに差し替えます。';
+    return false;
+  }
+
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
