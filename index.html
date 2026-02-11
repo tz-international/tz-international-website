@@ -25,9 +25,22 @@
     body{
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      background: radial-gradient(1200px 600px at 20% 10%, rgba(125,211,252,.18), transparent 55%),
-                  radial-gradient(900px 600px at 80% 0%, rgba(167,139,250,.18), transparent 55%),
-                  var(--bg);
+   　 background:
+  linear-gradient(
+    135deg,
+    rgba(125, 211, 252, 0.18),
+    rgba(167, 139, 250, 0.18)
+  ),
+  #0b0f14;
+
+
+  linear-gradient(
+    135deg,
+    rgba(125, 211, 252, 0.18),
+    rgba(167, 139, 250, 0.18)
+  ),
+  #0b0f14;
+
       color:var(--text);
       line-height:1.7;
     }
@@ -102,11 +115,10 @@
     .heroGrid{grid-template-columns: 1.15fr .85fr; align-items:stretch}
 
     .card{
-      background: rgba(15,22,32,.72);
-      border:1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding:22px;
+      background: rgba(255, 255, 255, 0.06);
+backdrop-filter: blur(18px);
+-webkit-backdrop-filter: blur(18px);
+border: 1px solid rgba(255,255,255,0.15);
     }
 
     .kicker{color:var(--accent); font-weight:800; letter-spacing:.3px; font-size:13px}
@@ -672,4 +684,5 @@
 
 </body>
 </html>
+
 
