@@ -9,8 +9,8 @@
     :root{
       --bg:#0b0f14;
       --card:#0f1620;
-      --text:#e9eef6;
-      --muted:#a9b4c3;
+      --text:rgba(255,255,255,.92);
+      --muted:rgba(255,255,255,.78);
       --line:rgba(255,255,255,.08);
       --accent:#7dd3fc;
       --accent2:#a78bfa;
@@ -24,6 +24,9 @@
     html{scroll-behavior:smooth}
     body{
       margin:0;
+      color: var(--text);
+text-shadow: 0 1px 0 rgba(0,0,0,.25);
+      
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
    　 background:
   linear-gradient(
@@ -684,5 +687,6 @@ border: 1px solid rgba(255,255,255,0.15);
 
 </body>
 </html>
+
 
 
